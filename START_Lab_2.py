@@ -40,11 +40,10 @@ def lab2Question4(list1, list2):
     sum_list = []
     pos = 0
     if list1len != list2len:
-        sum_list = []
-    else:
-        while pos < list1len:
-            sum_list.append(list1[pos]+list2[pos])
-            pos = pos + 1
+        return sum_list
+    while pos < list1len:
+        sum_list.append(list1[pos]+list2[pos])
+        pos = pos + 1
     return sum_list
 
 def lab2Question5():
