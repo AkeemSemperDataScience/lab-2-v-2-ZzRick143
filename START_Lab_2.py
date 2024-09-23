@@ -29,9 +29,9 @@ def lab2Question3(str1, str2):
     # Create a function that takes in two strings - str1 and str2
     # Return the number of times str2 appears in str1
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
-    substring = 'str2'
-    count = str1.count(substring)
-    return count
+    ss = str2
+    amount = str1.count(ss)
+    return amount
 
 def lab2Question4(list1, list2):
     # Create a function that takes in two equal length list of numbers. 
