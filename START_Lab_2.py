@@ -74,7 +74,7 @@ def lab2Question5(password):
     if containsLower == False:
         return False
     for char in px:
-        if char.isdigit():
+        if int(char).isdigit():
             containsNum = True
     if containsNum == False:
         return False
