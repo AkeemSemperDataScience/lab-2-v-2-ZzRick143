@@ -46,7 +46,7 @@ def lab2Question4(list1, list2):
         pos = pos + 1
     return sum_list
 
-def lab2Question5():
+def lab2Question5(password):
     # Create a function* that asks a user to enter a password that meets the following criteria:
     # - At least 8 characters long
     # - Contains at least one uppercase letter
@@ -57,9 +57,28 @@ def lab2Question5():
     # *Note: This function should call another function, called isValidPassword(password), 
     # that takes in a password and returns True if the password is valid, False otherwise.
     # You will need to make that function, exactly as described above. 
-    password = None
-
-    return password
+    px = list(password)
+    containsUpper = False
+    containsLower = False
+    containsNum = False
+    if len(password) <= 7:
+        return False
+    for char in px:
+        if char.isupper():
+            containsUpper = True 
+    if containsUpper == False:
+        return False
+    for char in px:
+        if char.islower():
+            containsLower = True
+    if containsLower == False:
+        return False
+    for char in px:
+        if char.isdigit():
+            containsNum = True
+    if containsNum == False:
+        return False
+    return True
 
 def isValidPassword(password):
     # Create a function that takes in a password and returns True if the password is valid, False otherwise
