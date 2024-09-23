@@ -74,7 +74,7 @@ def lab2Question5(password):
     if containsLower == False:
         return False
     for char in px:
-        if int(char).isdigit():
+        if char.isdigit():
             containsNum = True
     if containsNum == False:
         return False
@@ -86,5 +86,26 @@ def isValidPassword(password):
     # - Contains at least one uppercase letter
     # - Contains at least one lowercase letter
     # - Contains at least one number
-    pass
+    px = list(password)
+    containsUpper = False
+    containsLower = False
+    containsNum = False
+    if len(password) <= 7:
+        return False
+    for char in px:
+        if char.isupper():
+            containsUpper = True 
+    if containsUpper == False:
+        return False
+    for char in px:
+        if char.islower():
+            containsLower = True
+    if containsLower == False:
+        return False
+    for char in px:
+        if char.isdigit():
+            containsNum = True
+    if containsNum == False:
+        return False
+    return True
 
